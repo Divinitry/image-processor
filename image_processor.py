@@ -17,7 +17,7 @@ def rgb_normalizer(rgb_value):
     rgb_sum = 0
     for rgb_tuple in rgb_value:
         rgb_sum += sum(rgb_tuple)
-    normalized_rgb = rgb_sum // len(rgb_value)
+    normalized_rgb = rgb_sum // (len(rgb_value) * 3)
     return find_greyscale(normalized_rgb)
 
 image_array = np.array(im)
